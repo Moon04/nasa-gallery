@@ -1,5 +1,5 @@
 .img-card {
-  min-width: 25rem;
+  min-width: 25rem !important;
   width: 20%;
   max-width: 40rem;
   height: 24rem;
