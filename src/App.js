@@ -42,7 +42,13 @@ function App() {
     <div className="App">
       <Header dateRange={dateRange} onRangeChange={handleRangeChange} />
       <MainContent>
-        {pictures && !isLoading ? <ImagesList images={pictures} /> : <Loader />}
+        {pictures && !isLoading ? (
+          <ImagesList
+            images={pictures.filter((pic) => pic.media_type === "image")}
+          />
+        ) : (
+          <Loader />
+        )}
       </MainContent>
     </div>
   );
